@@ -11,7 +11,7 @@
  * @author      Dmi3yy (dmi3yy@gmail.com)
  * @internal    @events OnManagerWelcomeHome,OnManagerWelcomeRender
  * @internal    @modx_category Dashboard
- * @internal    @properties &ga_email = GA Email;text; ga_profile@mail.com &ga_password = GA Password;text; ga_password &ga_profile_id = GA profile_id;text;XXXXXX &ga_days = GA Days Show;text;30 &ga_height = GA Widget Height;text;250 &gaBoxEvoEvent= Google Analitycs Box placement;list;OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeHome
+ * @internal    @properties &ga_email = GA Email;text; ga_profile@mail.com &ga_password = GA Password;text; ga_password &ga_profile_id = GA profile_id;text;XXXXXX &ga_days = GA Days Show;text;30 &ga_height = GA Widget Height;text;250 &gaBoxEvoEvent= Google Analytics Box placement;list;OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeHome
  * @internal    @installset base
  * @internal    @disabled 1
  */
