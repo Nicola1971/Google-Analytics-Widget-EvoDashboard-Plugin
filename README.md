@@ -11,9 +11,13 @@ Original author: **dmi3yy** https://github.com/dmi3yy
 
 #Updates:
 
+##1.2
+* Updated for EvoDashboard 1.1
+* You can move the widget OnManagerWelcomePrerender/OnManagerWelcomeHome/OnManagerWelcomeRender
+
 ## 1.1
 ### Support for EvoDashboard:
 * removed from event OnManagerWelcomePrerender
-* added **&gaBoxEvoEvent**= Google Analytics Box placement (OnManagerWelcomeHome/OnManagerWelcomeRender)
+* added **&gaBoxEvoEvent**= Google Analytics Box placement 
 * added awesomefont icon fa-line-chart in the titlebar 
 
