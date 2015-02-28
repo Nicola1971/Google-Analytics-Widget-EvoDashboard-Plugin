@@ -46,9 +46,9 @@ if($e->name == ''.$gaBoxEvoEvent.''){
 			$flot_data_views = '['.implode(',',$flot_datas_views).']';
 		}
 
-		$output = ' <div class="sectionHeader"><i class="fa fa-line-chart"></i>
+		$output = ' <div class="col-sm-12"><div class="widget-wrapper"><div class="widget-title sectionHeader"><i class="fa fa-line-chart"></i>
  Google Analytics</div>
-					<div class="sectionBody" id="gadw" style="height:'.$ga_height.'px"></div>
+					<div class="widget-stage sectionBody" id="gadw" style="height:'.$ga_height.'px"></div></div>
 					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 					<script language="javascript" type="text/javascript" src="../assets/plugins/gadw/jquery.flot.min-time.js"></script>
 					<script type="text/javascript">
@@ -60,7 +60,7 @@ if($e->name == ''.$gaBoxEvoEvent.''){
 								{xaxis: {mode: "time",minTickSize: [1, "day"]},lines: { show: true },points: { show: true },grid: { backgroundColor: "#fffaff" }
 							});
 						});
-					</script>';
+					</script></div>';
 
 		foreach (glob(MODX_BASE_PATH . 'assets/cache/gadw.widgetCache-*.php') as $filename) {
    			unlink($filename);
