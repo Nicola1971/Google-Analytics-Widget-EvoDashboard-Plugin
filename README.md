@@ -15,6 +15,7 @@ Original author: **dmi3yy** https://github.com/dmi3yy
 * Updated Flot version
 * Added Flot Resize plugin (for responsive charts)
 * Added Flot Tooltip Plugin (new tooltip feature)
+
 ##1.3
 * Updated for EvoDashboard 2.0 (removed jquery call)
 
