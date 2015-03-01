@@ -1,11 +1,11 @@
 //<?php
 /**
- * Google Analitycs Dashboard Widget for EvoDashboard
+ * Google Analitycs Widget for EvoDashboard
  *
  * show Visitors and Pagevisits
  *
  * @category    plugin
- * @version     0.1.1
+ * @version     0.1.3
  * @license     http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  * @package     modx
  * @author      Dmi3yy (dmi3yy@gmail.com)
@@ -48,8 +48,8 @@ if($e->name == ''.$gaBoxEvoEvent.''){
 
 		$output = ' <div class="col-sm-12"><div class="widget-wrapper"><div class="widget-title sectionHeader"><i class="fa fa-line-chart"></i>
  Google Analytics</div>
-					<div class="widget-stage sectionBody" id="gadw" style="height:'.$ga_height.'px"></div></div>
-					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+					<div class="widget-stage sectionBody" id="gadw" style="width:99%;height:'.$ga_height.'px"></div></div>
+				<!--	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 					<script language="javascript" type="text/javascript" src="../assets/plugins/gadw/jquery.flot.min-time.js"></script>
 					<script type="text/javascript">
 						$(document).ready(function() {
