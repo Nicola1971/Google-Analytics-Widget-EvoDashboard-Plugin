@@ -5,13 +5,13 @@
  * show Visitors and Pagevisits
  *
  * @category    plugin
- * @version     0.1.4
+ * @version     1.5
  * @license     http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  * @package     modx
  * @author      Nicola Lambathakis
  * @internal    @events OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender
  * @internal    @modx_category Dashboard
- * @internal    @properties &ga_email = GA Email;text; ga_profile@mail.com &ga_password = GA Password;text; ga_password &ga_profile_id = GA profile_id;text;XXXXXX &ga_days = GA Days Show;text;30 &ga_height = GA Widget Height;text;250 &gaBoxEvoEvent= Google Analytics Box placement;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender
+ * @internal    @properties &ga_email = GA Email;text; ga_profile@mail.com &ga_password = GA Password;text; ga_password &ga_profile_id = GA profile_id;text;XXXXXX &ga_days = GA Days Show;text;30 &ga_height = GA Widget Height;text;250 &gaBoxEvoEvent= Google Analytics Box placement;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender &WidgetSize= Widget size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half
  * @internal    @installset base
  * @internal    @disabled 1
  */
@@ -27,6 +27,14 @@ https://www.google.com/analytics/reporting/?reset=1&id=XXXXXXXX&pdr=20110702-201
 For the NEW VERSION analytic page it is the number at the end of the ERL starting with p
 https://www.google.com/analytics/web/#home/a11345062w43527078pXXXXXXXX/
 */
+$WidgetSize = isset($WidgetSize) ? $WidgetSize : 'dashboard-block-full';
+//widget grid size
+if ($WidgetSize == 'dashboard-block-full') {
+$WidgetWidth = 'col-sm-12';
+} else {
+$WidgetWidth = 'col-sm-6';
+}
+
 $e = &$modx->Event;
 if($e->name == ''.$gaBoxEvoEvent.''){
 	if(!file_exists(MODX_BASE_PATH . 'assets/cache/gadw.widgetCache-'.date(z).'.php')){
@@ -51,7 +59,7 @@ if($e->name == ''.$gaBoxEvoEvent.''){
 			$flot_data_views = '['.implode(',',$flot_datas_views).']';
 		}
 
-		$output = ' <div class="col-sm-12"><div class="widget-wrapper"><div class="widget-title sectionHeader"><i class="fa fa-line-chart"></i>
+		$output = ' <div class="'.$WidgetWidth.'"><div class="widget-wrapper"><div class="widget-title sectionHeader"><i class="fa fa-line-chart"></i>
  Google Analytics</div>
 					<div class="widget-stage sectionBody placeholder" id="gadw" style="width:99%;height:'.$ga_height.'px"></div></div>
 					<script language="javascript" type="text/javascript" src="../assets/plugins/gadw/jquery.flot.min.js"></script>
