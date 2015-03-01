@@ -11,6 +11,9 @@ Original author: **dmi3yy** https://github.com/dmi3yy
 
 #Updates:
 
+##1.5
+* Added Widget Size parameter (half/full)
+
 ##1.4
 * Updated Flot version
 * Added Flot Resize plugin (for responsive charts)
